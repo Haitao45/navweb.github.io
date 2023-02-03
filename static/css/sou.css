@@ -63,6 +63,9 @@ a {
 #content {
     width: 100%;
     height: 100%;
+    background-image: url(https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/cbdd60a2095f223329f444fdc664d2e6.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
 }
 
 .con {
