@@ -61,17 +61,17 @@ $(document).ready(function() {
             explain :"Holger's Blog",
         },
         '2':{
-            title   :"Island",
-            url     :"https://mast.dragon-fly.club",
-            img     :"https://mast.dragon-fly.club/favicon.ico",
-            explain :"Island 岛屿 | 一座属于你的岛屿",
+            title   :"BiliBili",
+            url     :"https://www.bilibili.com/",
+            img     :"https://www.bilibili.com//favicon.ico",
+            explain :"BiliBili干杯",
 
         },
         '3':{
-            title   :"V2EX",
-            url     :"https://www.v2ex.com/",
+            title   :"SOJSON",
+            url     :"https://www.sojson.com/",
             img     :"./static/icon/v2ex.png",
-            explain :"V2EX",
+            explain :"SOJSON",
         },
         '4':{
             title   :"Steam",
