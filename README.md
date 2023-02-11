@@ -1,10 +1,4 @@
 # HTML+CSS+JS的极简起始页/静态页/导航页
- - 同时适配PC端，移动端
- - 参考以下项目并做修改优化
- - github：https://github.com/5iux/sou
- - github：https://github.com/yeetime/sou2
- - github：https://github.com/HolgerHuo/minimalist-search
-
 
 ## 与原版的改动
 
@@ -37,7 +31,6 @@
  - 和风天气API https://www.qweather.com
  - 一言API https://v1.hitokoto.cn
  - 今日诗词API https://www.jinrishici.com
- - 百度统计 https://hm.baidu.com
  - 字体 https://fonts.googleapis.com
  - 图标引用阿里图标 https://www.iconfont.cn
 ------
@@ -48,7 +41,7 @@
  - 注意：请更改或注释掉底部ICP备案信息
 
 ## 项目预览
-<img width="1423" alt="image" src="https://user-images.githubusercontent.com/45680714/161374630-92368305-11a6-472f-ba21-d7104a23c038.png">
+![](https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/20230212104738.png)
 
 **本项目基于GPL-3.0协议**
 
