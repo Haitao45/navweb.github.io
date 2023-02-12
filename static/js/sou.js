@@ -64,7 +64,7 @@ $(document).ready(function() {
             title   :"BiliBili",
             url     :"https://www.bilibili.com/",
             img     :"https://www.bilibili.com/favicon.ico",
-            explain :"BiliBili干杯",
+            explain :"BiliBili chears",
 
         },
         '3':{
