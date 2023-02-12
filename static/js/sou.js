@@ -63,7 +63,7 @@ $(document).ready(function() {
         '2':{
             title   :"BiliBili",
             url     :"https://www.bilibili.com/",
-            img     :"https://www.bilibili.com//favicon.ico",
+            img     :"https://www.bilibili.com/favicon.ico",
             explain :"BiliBili干杯",
 
         },
