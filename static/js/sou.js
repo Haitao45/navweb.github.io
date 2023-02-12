@@ -55,10 +55,10 @@ $(document).ready(function() {
     //主页快捷方式【预设】
     var quick_list_preinstall = {
         '1':{
-            title   :"Blog",
-            url     :"https://blog.holger.net.cn/",
-            img     :"https://i.holger.net.cn/static/images/avatar-300x300.webp",
-            explain :"Holger's Blog",
+            title   :"StackOverflow",
+            url     :"https://stackoverflow.com/",
+            img     :"https://stackoverflow.com/favicon.ico",
+            explain :"StackOverflow",
         },
         '2':{
             title   :"BiliBili",
@@ -74,10 +74,10 @@ $(document).ready(function() {
             explain :"SOJSON",
         },
         '4':{
-            title   :"Steam",
-            url     :"https://store.steampowered.com/",
-            img     :"./static/icon/steam.ico",
-            explain :"Steam",
+            title   :"PDF",
+            url     :"https://www.pdfpai.com/",
+            img     :"https://www.pdfpai.com/favicon.ico",
+            explain :"PDFpai",
         },
         '5':{
             title   :"GitHub",
