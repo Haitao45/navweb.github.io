@@ -55,7 +55,7 @@ $(document).ready(function() {
     //主页快捷方式【预设】
     var quick_list_preinstall = {
         '1':{
-            title   :"StackOverflow",
+            title   :"StackOver",
             url     :"https://stackoverflow.com/",
             img     :"https://stackoverflow.com/favicon.ico",
             explain :"StackOverflow",
@@ -76,7 +76,7 @@ $(document).ready(function() {
         '4':{
             title   :"PDF",
             url     :"https://www.pdfpai.com/",
-            img     :"https://www.pdfpai.com/favicon.ico",
+            img     :"./static/icon/v2ex.png",
             explain :"PDFpai",
         },
         '5':{
