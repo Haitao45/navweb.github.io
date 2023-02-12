@@ -76,7 +76,7 @@ $(document).ready(function() {
         '4':{
             title   :"PDF",
             url     :"https://www.pdfpai.com/",
-            img     :"./static/icon/v2ex.png",
+            img     :"./static/icon/pdfpai.ico",
             explain :"PDFpai",
         },
         '5':{
