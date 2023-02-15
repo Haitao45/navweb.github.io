@@ -41,7 +41,7 @@
  - 注意：请更改或注释掉底部ICP备案信息
 
 ## 项目预览
-![](https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/20230212104738.png)
+![](https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/20230215112115.png)
 
 **本项目基于GPL-3.0协议**
 
