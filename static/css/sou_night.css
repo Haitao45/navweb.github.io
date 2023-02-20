@@ -74,7 +74,7 @@ a {
     height: 100%;
     background-image: url(https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/bd4290e82ef2852cf29d8c084ad91054.jpg);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .con {
