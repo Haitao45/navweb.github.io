@@ -3,7 +3,7 @@
     "short_name":"Wayne导航主页",
     "theme_color":"#f5f5f5",
     "background_color":"#f5f5f5",
-    "display":"standalone",
+    "display":"browser",
     "scope":"/",
     
     "icons":[ {
