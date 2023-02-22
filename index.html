@@ -454,13 +454,15 @@
         <div class="con">
            <div class="shlogo"></div>
             <div class="sou">
-                 <form target="_blank" class="search" action="https://www.google.com/search">
+                 <form id="sear" target="_blank" class="search" action="https://www.google.com/search">
                     <img class="se" src="static/icon/google_1.png" title="Switch"></img>
                     <input id="search_placeholder" class="wd" type="text" name="wd" placeholder="My life is all about you~">
-                    <button class="s">
+                    <button id="searbtn" class="s">
                         <i style="font-size: 20px;" class="iconfont icon-sousuo"></i>
                     </button>
+                    
                 </form>
+                <ul id="oul" class="smart_tab" style="display: none;"></ul>
                 <div class="search-engine" style="display: none;">
                     <div class="search-engine-head">
                         <strong class="search-engine-tit">Select Search Engine</strong>
@@ -545,6 +547,62 @@
                 });
         </script>
         <!--今日诗词 placeholder end-->
+        <!-- 搜索补全 -->
+        <script>
+            //url为百度接口，wd后面拼上要搜索的内容。
+            var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=';
+            var oul = document.getElementById('oul');
+            var inp = document.getElementById('search_placeholder');
+            var sear = document.getElementById('sear');
+            
+            //oninput事件，input内value发生改变时触发，事件触发的第一步是先清除上一个script。
+            search_placeholder.oninput = function () {
+
+                var ourl = url + inp.value + '&cb=fn';
+                // del();
+            //input内无值时，页面无内容。有值的时候发送请求。
+                if (this.value != '') {
+                    // 显示提示框
+                    var jsonp = document.createElement('script');
+                    console.log('our',ourl);
+                    jsonp.src = ourl;
+                    document.body.appendChild(jsonp);
+                    sear.setAttribute('style','border-radius: 6px 6px 0px 0px');
+                    oul.style.display = 'block';
+                } else {
+                    // 隐藏提示框
+                    sear.setAttribute('style','');
+                    oul.style.display = 'none';	// 隐藏选择的元素
+                    oul.innerHTML = ' ';
+                }
+            }
+        
+            function fn(data) {
+            //接收的数据显示之前清除上一次显示的内容。
+                var btn = document.getElementById('searbtn');
+                oul.innerHTML = ' ';
+                for (var i = 0; i < data.s.length; i++) {
+                    var oli = document.createElement('li');
+                    oli.innerHTML = data.s[i];
+                    //为每一项添加点击事件，点击时将点击的内容显示到input中。
+                    oli.onclick = function () {
+                        inp.value = this.innerHTML;
+                        btn.click();
+                        console.log('点击拉');
+                    }
+                    oul.appendChild(oli);
+                }
+            };
+        
+            function del() {
+                var scr = document.querySelectorAll('script');
+                if (scr.length === 0) {
+                    return;
+                }
+                document.body.removeChild(scr[scr.length - 1]);
+            }
+        </script>
+        <!-- 搜索补全end -->
         </div>
         <div class="foot">
 			<!--这里可以输入信息-->

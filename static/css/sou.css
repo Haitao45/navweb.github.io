@@ -138,7 +138,39 @@ a {
     -moz-opacity:0.7;
     opacity: 0.7
 }
+.smart_tab {
+    z-index: 15;
+    /* margin-left: 45px; */
+    top: 52px;
+    border-top-style:solid;
+    border-top-color: #777;
+    width: 100%;
+    /* box-shadow: 0px 0px 5px #ccc; */
+    position: absolute;
+    /* list-style: none; */
+    /* border: 1px solid #ccc; */
+    /* border-top: 0px; */
+    /* padding: 5px; */
+    background-color: #fbfbfb;
+    border-radius: 0px 0px 6px 6px;
+    font-size: 18px;
+}
+.smart_tab li{
+    display: flex;
+    align-items: center;
+    padding:0 50px;
+    cursor:pointer;
+}
+.smart_tab li:hover{
+    background-color: rgb(241, 241, 241);
 
+}
+.smart_tab li:first-child{
+    margin-top: 5px;
+}
+.smart_tab li:last-child{
+    margin-bottom: 5px;
+}
 .con .sou form .wd {
     width: 90%;
     height: 100%;
@@ -856,7 +888,7 @@ a.quick_div_a {
 .hitokoto{
     position: absolute;
     margin-top: 50px;
-    z-index: 1000;
+    z-index: 10;
     text-align: center;
     width: 100%;
     color: #383838;
