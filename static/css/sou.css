@@ -141,7 +141,7 @@ a {
 .smart_tab {
     z-index: 15;
     /* margin-left: 45px; */
-    top: 52px;
+    /* top: 52px; */
     border-top-style:solid;
     border-top-color: #777;
     width: 100%;
@@ -153,13 +153,14 @@ a {
     /* padding: 5px; */
     background-color: #fbfbfb;
     border-radius: 0px 0px 6px 6px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .smart_tab li{
     display: flex;
     align-items: center;
     padding:0 0 0 50px;
     cursor:pointer;
+    font-family: PingFangSC-Regular, sans-serif;
 }
 .smart_tab li:hover{
     background-color: rgb(241, 241, 241);
