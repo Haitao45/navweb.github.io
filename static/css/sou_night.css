@@ -151,7 +151,7 @@ a {
 .smart_tab li{
     display: flex;
     align-items: center;
-    padding:0 50px;
+    padding:0 0 0 50px;
 }
 .smart_tab li:first-child{
     margin-top: 5px;
