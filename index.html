@@ -556,6 +556,7 @@
             var oul = document.getElementById('oul');
             var inp = document.getElementById('search_placeholder');
             var sear = document.getElementById('sear');
+            var sou = document.getElementById('sou');
             
             //oninput事件，input内value发生改变时触发，事件触发的第一步是先清除上一个script。
             search_placeholder.oninput = function () {
@@ -577,8 +578,41 @@
                     oul.style.display = 'none';	// 隐藏选择的元素
                     oul.innerHTML = ' ';
                 }
-            }
+            };
         
+            // inp.onfocus = function (){
+            //     // 获得焦点函数
+            //     if (inp.value != ''){
+            //         sear.setAttribute('style','border-radius: 6px 6px 0px 0px');
+            //         oul.style.display = 'block';
+            //     }
+            // };
+            // inp.onblur = function (){
+            //     console.log('失去焦点');
+            //     // 失去焦点函数
+            //     sear.setAttribute('style','');
+            //     oul.style.display = 'none';	// 隐藏选择的元素
+            //     // 清空内容
+            //     oul.innerHTML = ' ';
+
+            // };
+
+            function clickoutSide(nameClass,callback){
+                // 全局注册点击事件
+                document.onclick = function(e){
+                    //若点击元素为目标元素则返回
+                    if(e.target.className===nameClass) return  
+                    //否则执行回调函数
+                    callback()
+                }
+            }
+            clickoutSide('sou',function(){
+                sear.setAttribute('style','');
+                oul.style.display = 'none';	// 隐藏选择的元素
+                // 清空内容
+                oul.innerHTML = ' ';
+            })
+
             function fn(data) {
             //接收的数据显示之前清除上一次显示的内容。
                 var btn = document.getElementById('searbtn');
@@ -590,7 +624,6 @@
                     oli.onclick = function () {
                         inp.value = this.innerHTML;
                         btn.click();
-                        console.log('点击拉');
                     }
                     oul.appendChild(oli);
                 }
@@ -602,7 +635,7 @@
                     return;
                 }
                 document.body.removeChild(scr[scr.length - 1]);
-            }
+            };
         </script>
         <!-- 搜索补全end -->
         </div>
