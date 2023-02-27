@@ -143,7 +143,7 @@ a {
 .smart_tab li{
     display: flex;
     align-items: center;
-    padding:0 0 0 50px;
+    padding:5px 0 5px 55px;
     cursor:pointer;
     font-family: PingFangSC-Regular, sans-serif;
 }
