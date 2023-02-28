@@ -143,15 +143,21 @@ a {
 .smart_tab li{
     display: flex;
     align-items: center;
-    padding:5px 0 5px 55px;
+    padding:5px 0 5px 15px;
     cursor:pointer;
     font-family: PingFangSC-Regular, sans-serif;
+}
+.smart_tab li span{
+    padding-left: 10px;
 }
 .smart_tab li:first-child{
     margin-top: 5px;
 }
 .smart_tab li:last-child{
     margin-bottom: 5px;
+}
+.search-ico {
+    width: 25px;
 }
 .sou form .se {
     width: 40px;

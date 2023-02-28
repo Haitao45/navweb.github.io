@@ -619,12 +619,20 @@
                 oul.innerHTML = ' ';
                 for (var i = 0; i < data.s.length; i++) {
                     var oli = document.createElement('li');
-                    oli.innerHTML = data.s[i];
+                    var img = document.createElement('img');
+                    var span = document.createElement('span');
+                    img.className='search-ico';
+                    img.src = 'static/css/search.png';
+                    span.innerHTML = data.s[i];
                     //为每一项添加点击事件，点击时将点击的内容显示到input中。
                     oli.onclick = function () {
                         inp.value = this.innerHTML;
                         btn.click();
                     }
+
+                    oli.appendChild(img);
+                    oli.appendChild(span);
+
                     oul.appendChild(oli);
                 }
             };

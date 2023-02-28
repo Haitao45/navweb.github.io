@@ -158,12 +158,18 @@ a {
     box-shadow: 0 1px 6px 0 #fdfdfd;
 
 }
+.search-ico {
+    width: 25px;
+}
 .smart_tab li{
     display: flex;
     align-items: center;
-    padding:5px 0 5px 55px;
+    padding:5px 0 5px 15px;
     cursor:pointer;
     font-family: PingFangSC-Regular, sans-serif;
+}
+.smart_tab li span{
+    padding-left: 10px;
 }
 .smart_tab li:hover{
     background-color: rgb(241, 241, 241);
