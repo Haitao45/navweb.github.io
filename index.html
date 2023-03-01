@@ -626,7 +626,10 @@
                     span.innerHTML = data.s[i];
                     //为每一项添加点击事件，点击时将点击的内容显示到input中。
                     oli.onclick = function () {
-                        inp.value = this.innerHTML;
+                        var note = this.innerHTML;
+                        var frontlist = note.split('<span>');
+                        var backlist = frontlist[1].split('</span>');
+                        inp.value = backlist[0];
                         btn.click();
                     }
 
