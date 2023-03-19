@@ -552,7 +552,8 @@
         <!-- 搜索补全 -->
         <script>
             //url为百度接口，wd后面拼上要搜索的内容。
-            var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=';
+            var url = 'http://suggestqueries.google.com/complete/search?client=youtube&q=';
+            // var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=';
             var oul = document.getElementById('oul');
             var inp = document.getElementById('search_placeholder');
             var sear = document.getElementById('sear');
@@ -560,8 +561,8 @@
             
             //oninput事件，input内value发生改变时触发，事件触发的第一步是先清除上一个script。
             search_placeholder.oninput = function () {
-
-                var ourl = url + inp.value + '&cb=fn';
+                var ourl = url + inp.value +'&jsonp=fn'
+                // var ourl = url + inp.value + '&cb=fn';
                 // del();
             //input内无值时，页面无内容。有值的时候发送请求。
                 if (this.value != '') {
@@ -615,15 +616,17 @@
 
             function fn(data) {
             //接收的数据显示之前清除上一次显示的内容。
+            // console.log('dataaaa',data[1]);
                 var btn = document.getElementById('searbtn');
                 oul.innerHTML = ' ';
-                for (var i = 0; i < data.s.length; i++) {
+                // for (var i = 0; i < data.s.length; i++) {
+                for (var i = 0; i < data[1].length && i<10; i++) {
                     var oli = document.createElement('li');
                     var img = document.createElement('img');
                     var span = document.createElement('span');
                     img.className='search-ico';
                     img.src = 'static/css/search.png';
-                    span.innerHTML = data.s[i];
+                    span.innerHTML = data[1][i][0];
                     //为每一项添加点击事件，点击时将点击的内容显示到input中。
                     oli.onclick = function () {
                         var note = this.innerHTML;
