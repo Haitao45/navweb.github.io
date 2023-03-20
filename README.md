@@ -24,6 +24,6 @@
 
 ## 食用方法：
  - 下载源码直接部署网站即可
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Wayne-HJ)](https://github.com/anuraghazra/github-readme-stats)
+
 **本项目基于GPL-3.0协议**
 
