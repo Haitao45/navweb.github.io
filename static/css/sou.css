@@ -428,9 +428,9 @@ a.quick_div_a {
 }
 #menu.on {
     right: 380px;
-    background: #29f;
+    background: rgb(70 76 81 / 22%);
     border-radius: 25px;
-    box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
+    box-shadow: rgb(67 73 79 / 30%) 0px 6px 8px;
 }
 
 #menu.on i {
@@ -583,14 +583,14 @@ a.quick_div_a {
 
 
 .set_blocks {
-    background: rgb(221, 221, 221);
+    background: rgbrgb(221 221 221 / 7%);
     margin-top: 10px;
     border-radius: 5px;
 }
 
 .set_blocks_title {
     font-size: 14px;
-    background-color: rgb(65, 110, 152);
+    background-color: rgb(65 110 152 / 27%);
     color: #fff;
     padding: 10px 15px;
     border-top-right-radius: 5px;
@@ -615,7 +615,7 @@ a.quick_div_a {
 
 .set_blocks_content table tr td {
     border-bottom:1px solid;
-    border-color: rgb(71, 144, 191);
+    border-color: rgb(136 143 147 / 31%);
 }
 
 .set_blocks_content button {
@@ -702,7 +702,8 @@ a.quick_div_a {
 }
 
 .my_data textarea {
-    width:100%
+    width:100%;
+    background: #56565629;
 }
 
 
