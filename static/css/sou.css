@@ -423,7 +423,9 @@ a.quick_div_a {
     position: absolute;
     left: 0;
 }
-
+#theme-switch.on {
+    display: none;
+}
 #menu.on {
     right: 380px;
     background: #29f;
@@ -461,7 +463,7 @@ a.quick_div_a {
     position: absolute;
     right: 0px;
     z-index: 2000;
-    background: #222d46;
+    background: #222d461a;
     transition: 0.5s all ease-in-out;
 }
 
@@ -534,7 +536,7 @@ a.quick_div_a {
     display: block;
     color: #fff;
     font-weight: 500;
-    background: #293550;
+    background: #2935503d;
     text-align: left;
     font-size: 12px;
 }

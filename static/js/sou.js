@@ -155,10 +155,14 @@ $(document).ready(function() {
     $("#menu").click(function(event) {
         $(this).toggleClass('on');
         $(".side").toggleClass('closed');
+        //隐藏切换版本按钮
+        $("#theme-switch").toggleClass('on');
     });
     $("#content").click(function(event) {
         $(".on").removeClass('on');
         $(".side").addClass('closed');
+        //隐藏切换版本按钮
+        $("#theme-switch").removeClass('on');
     });
 
     // 侧栏标签卡切换
