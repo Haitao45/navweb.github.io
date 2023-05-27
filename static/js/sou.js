@@ -68,10 +68,10 @@ $(document).ready(function() {
 
         },
         '3':{
-            title   :"SOJSON",
-            url     :"https://www.sojson.com/",
-            img     :"./static/icon/v2ex.png",
-            explain :"SOJSON",
+            title   :"Youtube",
+            url     :"https://www.youtube.com/",
+            img     :"./static/icon/youtube.png",
+            explain :"YOUTUBE",
         },
         '4':{
             title   :"PDF",
