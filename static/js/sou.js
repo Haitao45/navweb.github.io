@@ -17,7 +17,7 @@ $(document).ready(function() {
         },
         '2':{
             id      :2,
-            title   :"百度",
+            title   :"Baidu",
             url     :"https://www.baidu.com/s",
             name    :"wd",
             img     :"./static/icon/baidu.ico",
@@ -31,14 +31,14 @@ $(document).ready(function() {
         },
         '4':{
             id      :4,
-            title   :"多吉",
+            title   :"Doge",
             url     :"https://www.dogedoge.com/results",
             name    :"q",
             img     :"./static/icon/doge_ico.png",
         },
         '5':{
             id      :5,
-            title   :"秘迹",
+            title   :"Miji",
             url     :"https://mijisou.com",
             name    :"q",
             img     :"./static/icon/mijisou.png",
