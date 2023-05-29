@@ -492,6 +492,7 @@ a.quick_div_a {
 .tab-nav a.current {
     background: rgba(0, 27, 26, 0.28);
     color: #dedbdb;
+    border-radius: 5px;
 }
 
 .tab-con {
