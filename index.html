@@ -499,43 +499,82 @@
                     <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
                 </div>
             </div>
+        <!--一言api-->
         <script async>
-            fetch('https://v1.hitokoto.cn')
+            // 中文
+            // fetch('https://v1.hitokoto.cn')
+            // .then(function (res){
+            // return res.json();
+            // })
+            // .then(function (data) {
+            // var hitokoto = document.getElementById('hitokoto');
+            // hitokoto.innerText = data.hitokoto;
+            // var from = document.getElementById('from');
+            // from.innerText = data.from;
+            // })
+            // .catch(function (err) {
+            // console.error(err);
+            // })
+            // 英文
+            fetch('http://open.iciba.com/dsapi/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto;
+                var from = document.getElementById('from');
+                from.innerText = data.from;
+            })
+            .catch(error => {
+                console.error('请求错误:', error);
+                // 处理请求错误
+            });
+        </script>
+        <script>
+            // api GitHub
+            fetch('https://api.github.com/zen')
             .then(function (res){
-            return res.json();
+            return res.text();
             })
             .then(function (data) {
-            var hitokoto = document.getElementById('hitokoto');
-            hitokoto.innerText = data.hitokoto;
-            var from = document.getElementById('from');
-            from.innerText = data.from;
+            var teletype = document.getElementById("search_placeholder");
+            var telecopy =  data;
+            var cursor = "|";
+            var teletype = document.getElementById("search_placeholder");
+            teletype.placeholder = cursor;
+            var counter = 0;
+            var timer = setInterval(function(){
+                teletype.placeholder = telecopy.substr(0, counter) + cursor;
+                    counter++;
+                    if(counter === telecopy.length + 1) {
+                        clearInterval(timer);
+                    }
+                }, 100);
             })
             .catch(function (err) {
             console.error(err);
             })
-        </script>
-        <!--今日诗词-->
-        <script>
-              jinrishici.load(function(result) {
-                var telecopy =  result.data.content;
-                var cursor = "|";
-                var teletype = document.getElementById("search_placeholder");
-                teletype.placeholder = cursor;
-                var counter = 0;
-                var timer = setInterval(function(){
-                    teletype.placeholder = telecopy.substr(0, counter) + cursor;
-                        counter++;
-                        if(counter === telecopy.length + 1) {
-                            clearInterval(timer);
-                        }
-                    }, 100);
-                });
+        // 今日诗词
+            //   jinrishici.load(function(result) {
+            //     var telecopy =  result.data.content;
+            //     var cursor = "|";
+            //     var teletype = document.getElementById("search_placeholder");
+            //     teletype.placeholder = cursor;
+            //     var counter = 0;
+            //     var timer = setInterval(function(){
+            //         teletype.placeholder = telecopy.substr(0, counter) + cursor;
+            //             counter++;
+            //             if(counter === telecopy.length + 1) {
+            //                 clearInterval(timer);
+            //             }
+            //         }, 100);
+            //     });
         </script>
         <!--今日诗词 placeholder end-->
         <!-- 搜索补全 -->
         <script>
-            //url为百度接口，wd后面拼上要搜索的内容。
             var url = 'https://suggestqueries.google.com/complete/search?client=youtube&q=';
+            //url为百度接口，wd后面拼上要搜索的内容。
             // var url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=';
             var oul = document.getElementById('oul');
             var inp = document.getElementById('search_placeholder');
