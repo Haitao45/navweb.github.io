@@ -436,7 +436,7 @@
                     cityNameElement.textContent = cityName;
                     weatherDescriptionElement.textContent = weatherDescription;
                     temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C / ${temperatureFahrenheit.toFixed(2)}°F`;
-                    weatherIconElement.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+                    weatherIconElement.src = `https://openweathermap.org/img/w/${weatherIcon}.png`;
                 })
                 .catch(error => {
                     console.error('获取天气数据出错:', error);
