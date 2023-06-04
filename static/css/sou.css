@@ -916,7 +916,7 @@ a.quick_div_a {
     position: fixed;
     top: 5px;
     left: 2px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);/*背景颜色*/
     padding: 10px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -929,7 +929,6 @@ a.quick_div_a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
     border-radius: 5px; /* 添加边框圆角 */
   }
-
   #weather-icon {
     width: 50px;
     height: 50px;
