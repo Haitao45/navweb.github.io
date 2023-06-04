@@ -406,7 +406,7 @@
     <!-- 侧栏 end -->
     <!--和风天气插件-->
         <div id="weather-info">
-            <img id="weather-icon" src="" alt="Weather Icon">
+            <img id="weather-icon" src="" alt="Weather Icon" style="display: none;">
             <div id="weather-info-text">
                 <h2 id="city-name"></h2>
                 <p id="weather-description"></p>
@@ -437,6 +437,7 @@
                     weatherDescriptionElement.textContent = weatherDescription;
                     temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C / ${temperatureFahrenheit.toFixed(2)}°F`;
                     weatherIconElement.src = `https://openweathermap.org/img/w/${weatherIcon}.png`;
+                    weatherIconElement.style.display = 'block';
                 })
                 .catch(error => {
                     console.error('获取天气数据出错:', error);
