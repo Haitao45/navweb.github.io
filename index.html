@@ -405,9 +405,70 @@
     </div>
     <!-- 侧栏 end -->
     <!--和风天气插件-->
-    <div class="mywth" style="width: 320px;">
-        <div id="he-plugin-simple"></div> 
-        <script async>WIDGET = {
+        <div id="weather-info">
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <div id="weather-info-text">
+                <h2 id="city-name"></h2>
+                <p id="weather-description"></p>
+                <p id="temperature"></p>
+            </div>
+        </div>
+        <script async>
+            function getWeatherByCoordinates(latitude, longitude) {
+                var apiKey = 'd535252e1e4dadc96958a8c07aa37e63';
+                var url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
+                fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const cityName = data.name;
+                    const weatherDescription = data.weather[0].description;
+                    const temperatureKelvin = data.main.temp;
+                    const temperatureCelsius = temperatureKelvin - 273.15;
+                    const temperatureFahrenheit = (temperatureKelvin - 273.15) * 9 / 5 + 32;
+                    const weatherIcon = data.weather[0].icon;
+
+                    const weatherInfoDiv = document.getElementById('weather-info');
+                    const cityNameElement = document.getElementById('city-name');
+                    const weatherDescriptionElement = document.getElementById('weather-description');
+                    const temperatureElement = document.getElementById('temperature');
+                    const weatherIconElement = document.getElementById('weather-icon');
+
+                    cityNameElement.textContent = cityName;
+                    weatherDescriptionElement.textContent = weatherDescription;
+                    temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C / ${temperatureFahrenheit.toFixed(2)}°F`;
+                    weatherIconElement.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+                })
+                .catch(error => {
+                    console.error('获取天气数据出错:', error);
+                });
+            }
+            function getCurrentLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+
+                        // 在控制台打印经纬度坐标
+                        console.log("Latitude: " + latitude);
+                        console.log("Longitude: " + longitude);
+
+                        // 调用获取天气信息的方法
+                        getWeatherByCoordinates(latitude, longitude);
+                    },
+                    function(error) {
+                        // 获取位置信息失败时的处理
+                        console.log("Error getting location:", error);
+                    }
+                    );
+                } else {
+                    // 浏览器不支持 Geolocation API 的处理
+                    console.log("Geolocation is not supported by this browser.");
+                }
+            }
+            window.addEventListener('load', getCurrentLocation);
+        </script>
+        <!-- <script async>WIDGET = {
             CONFIG: {
                 "modules": "01234",
                 "background": 5,
@@ -429,8 +490,7 @@
             }
         }
         </script> 
-        <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-    </div>
+        <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script> -->
     <!--和风天气插件-->
     <!--搜索框和书签 end-->
     <div id="content">
@@ -495,9 +555,9 @@
                     </div>
                 </div>
                 
-                <div class="hitokoto">
+                <!-- <div class="hitokoto">
                     <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
-                </div>
+                </div> -->
             </div>
         <!--一言api-->
         <script async>
@@ -516,19 +576,7 @@
             // console.error(err);
             // })
             // 英文
-            fetch('https://apiv3.shanbay.com/weapps/dailyquote/quote')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                var hitokoto = document.getElementById('hitokoto');
-                hitokoto.innerText = data.hitokoto;
-                var from = document.getElementById('from');
-                from.innerText = data.from;
-            })
-            .catch(error => {
-                console.error('请求错误:', error);
-                // 处理请求错误
-            });
+            
         </script>
         <script>
             // api GitHub
