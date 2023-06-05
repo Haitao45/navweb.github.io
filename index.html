@@ -451,7 +451,7 @@
 
                     cityNameElement.textContent = cityName;
                     weatherDescriptionElement.textContent = weatherDescription;
-                    temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C`;
+                    temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(0)}°C`;
                     weatherIconElement.src = `https://openweathermap.org/img/w/${weatherIcon}.png`;
                     weatherIconElement.style.display = 'block';
                 })
