@@ -407,13 +407,29 @@
     <!--和风天气插件-->
         <div id="weather-info">
             <img id="weather-icon" src="" alt="Weather Icon" style="display: none;">
-            <div id="weather-info-text">
+            <div id="weather-info-text" style="display: none;">
                 <h2 id="city-name"></h2>
                 <p id="weather-description"></p>
                 <p id="temperature"></p>
             </div>
         </div>
         <script async>
+            function showWeatherInfo() {
+                const weatherInfoText = document.getElementById('weather-info-text');
+                weatherInfoText.style.display = 'block';
+            }
+
+            function hideWeatherInfo() {
+                const weatherInfoText = document.getElementById('weather-info-text');
+                weatherInfoText.style.display = 'none';
+            }
+
+            // 获取天气图标元素
+            const weatherIcond = document.getElementById('weather-icon');
+
+            // 鼠标悬浮事件处理
+            weatherIcond.addEventListener('mouseover', showWeatherInfo);
+            weatherIcond.addEventListener('mouseout', hideWeatherInfo);
             function getWeatherByCoordinates(latitude, longitude) {
                 var apiKey = 'd535252e1e4dadc96958a8c07aa37e63';
                 var url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
@@ -435,7 +451,7 @@
 
                     cityNameElement.textContent = cityName;
                     weatherDescriptionElement.textContent = weatherDescription;
-                    temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C / ${temperatureFahrenheit.toFixed(2)}°F`;
+                    temperatureElement.textContent = `Temperature: ${temperatureCelsius.toFixed(2)}°C`;
                     weatherIconElement.src = `https://openweathermap.org/img/w/${weatherIcon}.png`;
                     weatherIconElement.style.display = 'block';
                 })
@@ -450,9 +466,9 @@
                         var latitude = position.coords.latitude;
                         var longitude = position.coords.longitude;
 
-                        // 在控制台打印经纬度坐标
-                        console.log("Latitude: " + latitude);
-                        console.log("Longitude: " + longitude);
+                        // // 在控制台打印经纬度坐标
+                        // console.log("Latitude: " + latitude);
+                        // console.log("Longitude: " + longitude);
 
                         // 调用获取天气信息的方法
                         getWeatherByCoordinates(latitude, longitude);
@@ -467,7 +483,12 @@
                     console.log("Geolocation is not supported by this browser.");
                 }
             }
+            
             window.addEventListener('load', getCurrentLocation);
+            // 获取天气图标元素
+            const weatherIcon = document.querySelector('.weather-icon');
+
+            
         </script>
         <!-- <script async>WIDGET = {
             CONFIG: {

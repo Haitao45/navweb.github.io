@@ -915,9 +915,9 @@ a.quick_div_a {
 #weather-info {
     position: fixed;
     top: 5px;
-    left: 2px;
+    left: 12px;
     background-color: rgba(255, 255, 255, 0.1);/*背景颜色*/
-    padding: 10px;
+    padding: 2px;
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -932,7 +932,7 @@ a.quick_div_a {
   #weather-icon {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   #weather-info-text {
@@ -940,7 +940,7 @@ a.quick_div_a {
   }
 
   #city-name {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     margin: 0;
   }
@@ -948,6 +948,7 @@ a.quick_div_a {
   #weather-description,
   #temperature {
     margin: 0;
+    padding-right: 5px;
   }
 .theme-switch{
     top: 20.5px;
