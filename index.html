@@ -5,7 +5,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>wayne导航主页</title>
+    <title>Wayne | NavPage</title>
     <!--链接外部资源-->
     <link rel="stylesheet" href="static/css/sou.css">
     <link id="daily-theme" rel="stylesheet" href="static/css/sou.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
@@ -125,22 +125,7 @@
                                 <li><a rel="nofollow" href="https://mail.sina.com.cn/" target="_blank"><i
                                         class="iconfont icon-xinlang" style="color: #e6162d;"></i>SinaMail</a></li>
                                 
-                                <!------>
-                                <li class="title"><i class="iconfont icon-msg"></i>SNS</li>
-                                <li><a href="https://mast.dragon-fly.club" target="_blank"><i
-                                    class="iconfont icon-cloudflare" style="color: #e6162d;"></i>Island</a></li>
-                                <li><a rel="nofollow" href="https://www.weibo.com" target="_blank"><i
-                                        class="iconfont icon-weibo" style="color: #e6162d;"></i>Weibo</a></li>
-                                <li><a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><i
-                                        class="iconfont icon-zhihu" style="color: #0084ff;"></i>Zhihu</a></li>
-                                <li><a rel="nofollow" href="https://www.douban.com/" target="_blank"><i
-                                        class="iconfont icon-douban" style="color: #072;"></i>Douban</a></li>
-                                <li><a rel="nofollow" href="https://www.instagram.com" target="_blank"><i
-                                        class="iconfont icon-instagram" style="color: #93009f;"></i>Instagram</a></li>
-                                <li><a rel="nofollow" href="https://www.twitter.com" target="_blank"><i
-                                        class="iconfont icon-twitter" style="color: #00bcff;"></i>Twitter</a></li>
-                                <li><a rel="nofollow" href="https://www.facebook.com" target="_blank"><i
-                                        class="iconfont icon-facebook" style="color: #4267b2;"></i>Facebook</a></li>
+                                
                                 <!------>
                                 <li class="title"><i class="iconfont icon-shipin"></i>Media</li>
                                 <li><a rel="nofollow" href="https://www.youtube.com/" target="_blank"><i
@@ -225,12 +210,32 @@
                                 <li><a rel="nofollow" href="https://fontawesome.com/icons?d=gallery&m=free"
                                        target="_blank"><i class="iconfont icon-font-awesome" style="color: #4af;"></i>Font
                                     A.</a></li>
-                                <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i
-                                        class="iconfont icon-windows" style="color: #48c;"></i>MSDN</a></li>
                                 <li><a rel="nofollow" href="https://dash.cloudflare.com/" target="_blank"><i
                                         class="iconfont icon-cloudflare" style="color: #f37f20;"></i>CloudFlare</a></li>
+                                <li><a rel="nofollow" href="https://console.dnspod.cn/dns/" target="_blank"><i
+                                    class="iconfont icon-cloudflare" style="color: #20ccf3;"></i>DNSPod</a></li>
                                 <li><a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><i
                                         class="iconfont icon-S" style="color:#065fe3;"></i>Swiper</a></li>
+                                <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i
+                                    class="iconfont icon-windows" style="color: #48c;"></i>MSDN</a></li>
+                                <li><a rel="nofollow" href="https://vercel.com/dashboard" target="_blank"><i
+                                    class="iconfont icon-cloudflare" style="color: #20a2f3;"></i>Vercel</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-msg"></i>SNS</li>
+                                <li><a href="https://mast.dragon-fly.club" target="_blank"><i
+                                    class="iconfont icon-cloudflare" style="color: #e6162d;"></i>Island</a></li>
+                                <li><a rel="nofollow" href="https://www.weibo.com" target="_blank"><i
+                                        class="iconfont icon-weibo" style="color: #e6162d;"></i>Weibo</a></li>
+                                <li><a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><i
+                                        class="iconfont icon-zhihu" style="color: #0084ff;"></i>Zhihu</a></li>
+                                <li><a rel="nofollow" href="https://www.douban.com/" target="_blank"><i
+                                        class="iconfont icon-douban" style="color: #072;"></i>Douban</a></li>
+                                <li><a rel="nofollow" href="https://www.instagram.com" target="_blank"><i
+                                        class="iconfont icon-instagram" style="color: #93009f;"></i>Instagram</a></li>
+                                <li><a rel="nofollow" href="https://www.twitter.com" target="_blank"><i
+                                        class="iconfont icon-twitter" style="color: #00bcff;"></i>Twitter</a></li>
+                                <li><a rel="nofollow" href="https://www.facebook.com" target="_blank"><i
+                                        class="iconfont icon-facebook" style="color: #4267b2;"></i>Facebook</a></li>
                                 <!------>
                                 <li class="title"><i class="iconfont icon-gouwuche"></i>Shopping</li>
                                 <li><a rel="nofollow" href="https://www.amazon.com.au/" target="_blank"><i
@@ -395,11 +400,14 @@
                     <div class="my_data">
                         <hr>
                         <br>
-                        <h3>Backup</h3>
-                        <textarea id="data_txt"></textarea>
+                        <h3>View</h3>
+                        <textarea id="data_txt" style="height: 200px;"></textarea>
                         <br>
-                        <button id="my_data_in">Import</button>
-                        <button id="my_data_out">Export</button>
+                        <div class="button_data">
+                            <div class="data_button" id="my_data_in"><a href="javascript:void(0);">Import</a></div>
+                            <div class="data_button" id="my_data_out"><a href="javascript:void(0);">Export</a></div>
+                        </div>
+                        
                     </div>
                 </div>
                 <!--我的 end-->
