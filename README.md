@@ -58,7 +58,7 @@
 
 | Development Tool | Description |
 |-|-|
-| VSCode | Vue Development IDE |
+| VSCode | Front-end Development IDE |
 
 ## Project Screenshots
 
