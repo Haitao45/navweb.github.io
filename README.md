@@ -1,29 +1,71 @@
-# 基于原生HTML+CSS+JS的起始页/导航页
+# <a name="readme-top">Starter Page / Navigation Page Based on Native HTML+CSS+JS</a>
 
+<p >
+   <a target="_blank" href="#">
+      <img src="https://img.shields.io/hexpm/l/plug.svg"/>
+      <img src="https://img.shields.io/badge/HTML-green.svg"/>
+      <img src="https://img.shields.io/badge/CSS-green.svg"/>
+      <img src="https://img.shields.io/badge/Javascript-green.svg"/>
+   </a>
+</p>
 
-## 特点
-- 精简代码
-- 侧边栏整合
-- 和风天气API
-- 一言API
-- 今日诗词API
-- 深色模式（跟随系统）
-- 增加搜索智能提示
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/Wayne-HJ/personal-website">
+    <img src="static/css/logo.png" alt="Logo"  height="80">
+  </a>
+  <h3 align="center">Starter Page / Navigation Page Based on Native HTML+CSS+JS</h3>
+  <!-- <p align="center">
+    This project is the Vue frontend of my personal website. -->
+    <!-- <br /> -->
+    <!-- <a href="https://github.com/Wayne-HJ/navweb"><strong>Explore the docs »</strong></a> -->
+    <!-- <br /> -->
+    <br />
+    <a href="https://wayne-hj.github.io/navweb/">View Demo</a>
+    ·
+    <a href="https://github.com/Wayne-HJ/navweb/issues">Report Bug</a>
+    <!-- ·
+    <a href="https://github.com/Wayne-HJ/navweb/issues">Request Feature</a> -->
+  </p>
+</div>
 
-## 引用外链
- - 和风天气API https://www.qweather.com
- - 一言API https://v1.hitokoto.cn
- - 今日诗词API https://www.jinrishici.com
- - 字体 https://fonts.googleapis.com
- - 图标引用阿里图标 https://www.iconfont.cn
-------
+[Project Description](#project-description) | [Technical Overview](#technical-overview) | [Runtime Environment](#runtime-environment) | [Development Environment](#development-environment) | [Project Screenshots](#project-screenshots) | [Getting Started](#getting-started)
 
-## 项目预览
-![](https://cdn.jsdelivr.net/gh/Haitao45/pictures@main/img/20230215112115.png)
-![](https://cdn.jsdelivr.net/gh/Wayne-HJ/pictures@main/img/20230222183636.png)
+<!-- ABOUT THE PROJECT -->
+## Project Description
+![Screenshot](https://cdn.jsdelivr.net/gh/Wayne-HJ/pictures@main/img/202306222136521.png)
 
-## 食用方法：
- - 下载源码直接部署网站即可
+- Clean code
+- Integrated sidebar with commonly used website navigation
+- Weather query support
+- Customizable quick bookmarks
+- Switchable search engines
+- Dark mode (system theme)
+- Added smart search suggestions
+- Icons using Alibaba Iconfont
+- GitHub API
 
-**本项目基于GPL-3.0协议**
+## Technical Overview
 
+**Frontend:** HTML + CSS + JavaScript
+
+## Runtime Environment
+
+**Hosting Service:** GitHub Pages | Vercel
+
+## Development Environment
+
+| Development Tool | Description |
+|-|-|
+| VSCode | Vue Development IDE |
+
+## Project Screenshots
+
+![](https://cdn.jsdelivr.net/gh/Wayne-HJ/pictures@main/img/202306222143946.png)
+![](https://cdn.jsdelivr.net/gh/Wayne-HJ/pictures@main/img/202306222139981.png)
+![](https://cdn.jsdelivr.net/gh/Wayne-HJ/pictures@main/img/202306222140631.png)
+
+## Getting Started
+Supports deployment on Vercel and GitHub Pages.
+Please translate the rest of the README into English.
