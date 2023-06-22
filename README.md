@@ -30,7 +30,7 @@
   </p>
 </div>
 
-[Project Description](#project-description) | [Technical Overview](#technical-overview) | [Runtime Environment](#runtime-environment) | [Development Environment](#development-environment) | [Project Screenshots](#project-screenshots) | [Getting Started](#getting-started)
+[Project Description](#project-description) | [Technical Overview](#technical-overview) | [Runtime Environment](#runtime-environment) | [Development Environment](#development-environment) | [Project Screenshots](#project-screenshots) | [Getting Started](#getting-started) | [Chinese(中文)](README_CN.md)
 
 <!-- ABOUT THE PROJECT -->
 ## Project Description
